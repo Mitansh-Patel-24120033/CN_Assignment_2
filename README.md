@@ -30,19 +30,22 @@ Three core components with associated tools:
 ## Repository Organization
 
 ```
-├── Task1/                 # Congestion control comparison
-│   ├── topology.py        # Mininet configuration
-│   ├── iperf_config.sh    # TCP client-server setup
-│   └── analysis.ipynb     # Jupyter metrics analysis
-├── Task2/                 # SYN flood implementation
-│   ├── syn_flood.py       # Attack script
-│   ├── mitigation.sh      # Kernel hardening
-│   └── packet_capture.sh  # tcpdump automation
-├── Task3/                 # Nagle's algorithm testing
-│   └── nagle_test.py      # Algorithm configuration
-└── utils/
-    ├── plot_generator.py       # Visualization tools
-    └── connection_analyzer.py  # TCP analysis
+├── Task1/                                 # Congestion control comparison
+│   ├── MNet.py                            # Mininet configuration
+│   ├── iperf_config.sh                    # TCP client-server setup
+│   └── analysis.ipynb                     # Jupyter metrics analysis
+├── Task2/                                 # SYN flood implementation
+│   ├── Client.py                          # Client script
+│   ├── Server.sh                          # Server script
+│   ├── Task2_Visualiztion.ipynb           # Notebook for Data Visualization
+│   └── client_task2.sh                    # test script
+├── Task3/                                 # Nagle's algorithm & Delayed ACK testing
+│   ├── Client.py                          # Client script
+│   ├── Server.sh                          # Server script
+│   ├── Task3_Visualiztion.ipynb           # Notebook for Data Visualization
+│   ├── server_task3.sh                    # server test script
+│   └── client_task3.sh                    # client test script
+└── README.md
 ```
 
 
