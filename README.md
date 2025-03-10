@@ -12,8 +12,10 @@ This is the repository containing the files for assignment(2) of Computer Networ
 1. **Protocol 1**: BIC TCP
 2. **Protocol 2**: HighSpeed TCP
 3. **Protocol 3**: Yeah TCP (derived from team ID formula)
-## Congestion Control Protocols:
-Manage network traffic to prevent overload. Uses mechanisms like TCP slow start and congestion avoidance algorithms. 
+ **Congestion Mitigation**: Techniques to reduce network overload (e.g., QoS, traffic shaping). Includes bandwidth upgrades and traffic prioritization.  
+
+ **Mininet**: Network emulator for creating virtual SDN environments. Simulates switches, hosts, and controllers for testing.  
+
 ## Implementation Structure
 
 Three core components with associated tools:
@@ -95,9 +97,6 @@ sudo sysctl -w net.ipv4.tcp_max_syn_backlog=1024
  Techniques to reduce network overload (e.g., QoS, traffic shaping). Includes bandwidth upgrades and traffic prioritization.  
 
 ### Task 3: Nagle's Algorithm
-
-Test configurations:
-
 ```bash
 python3 Task3/nagle_test.py --nagle <0/1> --delay_ack <0/1>
 ```
@@ -108,6 +107,9 @@ python3 Task3/nagle_test.py --nagle <0/1> --delay_ack <0/1>
 | 2 | 1 | 0 |
 | 3 | 0 | 1 |
 | 4 | 0 | 0 |
+ **Nagle’s Algorithm**: Reduces small packets by buffering data until ACK received. Disabled via `TCP_NODELAY` for latency-sensitive apps
+Test configurations:
+ **Delayed-ACK**: Delays TCP acknowledgments by ~500ms to combine responses. Conflicts with Nagle’s, causing temporary deadlocks.  
 
 ## Analysis Metrics
 
@@ -116,6 +118,11 @@ python3 Task3/nagle_test.py --nagle <0/1> --delay_ack <0/1>
 - **Window Size:** TCP header analysis
 - **Connection Duration:** tshark timestamps
 
+ **SYN Flag**: Initiates TCP connections during 3-way handshake. Sent by clients to synchronize sequence numbers.  
+ **FIN Flag**: Gracefully terminates TCP connections. Triggers 4-step closure process when no data remains. 
+ **RESET,ACK (RST,ACK)**: Abruptly terminates a TCP connection while acknowledging prior data. Combines RST (forceful closure) with ACK (confirms received packets) 
+ **FIN-ACK**: Gracefully closes one direction of a TCP connection while acknowledging data. Combines FIN (initiates closure) with ACK (confirms prior segment receipt) 
+Note: RST,ACK is rare (resets typically don't require ACKs), while FIN-ACK is common during normal shutdowns
 
 ## Deliverables
 
