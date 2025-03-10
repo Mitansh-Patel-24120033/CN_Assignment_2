@@ -1,0 +1,110 @@
+Guide to implementing Mininet CLI commands to fulfill task:
+
+(a)
+h7 iperf3 -s -p 9999 &
+h1 iperf3 -c 10.0.0.7 -p 9999 -b 10M -P 10 -t 150 -C bic
+
+h7 iperf3 -s -p 9999 &
+h1 iperf3 -c 10.0.0.7 -p 9999 -b 10M -P 10 -t 150 -C highspeed
+
+h7 iperf3 -s -p 9999 &
+h1 iperf3 -c 10.0.0.7 -p 9999 -b 10M -P 10 -t 150 -C yeah
+
+
+(b)
+h7 iperf -s -p 9991 &
+h7 iperf -s -p 9992 &
+h7 iperf -s -p 9993 &
+h1 iperf3 -c 10.0.0.7 -p 9991 -b 10M -P 10 -t 150 -C bic &
+h3 (sleep 15 && iperf3 -c 10.0.0.7 -p 9992 -b 10M -P 10 -t 120 -C bic) &
+h4 (sleep 30 && iperf3 -c 10.0.0.7 -p 9993 -b 10M -P 10 -t 90 -C bic) &
+
+h7 iperf -s -p 9991 &
+h7 iperf -s -p 9992 &
+h7 iperf -s -p 9993 &
+h1 iperf3 -c 10.0.0.7 -p 9991 -b 10M -P 10 -t 150 -C highspeed &
+h3 (sleep 15 && iperf3 -c 10.0.0.7 -p 9992 -b 10M -P 10 -t 120 -C highspeed) &
+h4 (sleep 30 && iperf3 -c 10.0.0.7 -p 9993 -b 10M -P 10 -t 90 -C highspeed) &
+
+h7 iperf -s -p 9991 &
+h7 iperf -s -p 9992 &
+h7 iperf -s -p 9993 &
+h1 iperf3 -c 10.0.0.7 -p 9991 -b 10M -P 10 -t 150 -C yeah &
+h3 (sleep 15 && iperf3 -c 10.0.0.7 -p 9992 -b 10M -P 10 -t 120 -C yeah) &
+h4 (sleep 30 && iperf3 -c 10.0.0.7 -p 9993 -b 10M -P 10 -t 90 -C yeah) &
+
+
+(c)
+-(1)
+h7 iperf3 -s -p 9999 &
+h3 iperf3 -c 10.0.0.7 -p 9999 -b 10M -P 10 -t 150 -C bic
+
+h7 iperf3 -s -p 9999 &
+h3 iperf3 -c 10.0.0.7 -p 9999 -b 10M -P 10 -t 150 -C highspeed
+
+h7 iperf3 -s -p 9999 &
+h3 iperf3 -c 10.0.0.7 -p 9999 -b 10M -P 10 -t 150 -C yeah
+
+-(2)
+--(a)
+h7 iperf -s -p 9991 &
+h7 iperf -s -p 9992 &
+h1 iperf3 -c 10.0.0.7 -p 9991 -b 10M -P 10 -t 150 -C bic &
+h2 iperf3 -c 10.0.0.7 -p 9992 -b 10M -P 10 -t 150 -C bic &
+
+h7 iperf -s -p 9991 &
+h7 iperf -s -p 9992 &
+h1 iperf3 -c 10.0.0.7 -p 9991 -b 10M -P 10 -t 150 -C highspeed &
+h2 iperf3 -c 10.0.0.7 -p 9992 -b 10M -P 10 -t 150 -C highspeed &
+
+h7 iperf -s -p 9991 &
+h7 iperf -s -p 9992 &
+h1 iperf3 -c 10.0.0.7 -p 9991 -b 10M -P 10 -t 150 -C yeah &
+h2 iperf3 -c 10.0.0.7 -p 9992 -b 10M -P 10 -t 150 -C yeah &
+
+--(b)
+h7 iperf -s -p 9991 &
+h7 iperf -s -p 9992 &
+h1 iperf3 -c 10.0.0.7 -p 9991 -b 10M -P 10 -t 150 -C bic &
+h3 iperf3 -c 10.0.0.7 -p 9992 -b 10M -P 10 -t 150 -C bic &
+
+h7 iperf -s -p 9991 &
+h7 iperf -s -p 9992 &
+h1 iperf3 -c 10.0.0.7 -p 9991 -b 10M -P 10 -t 150 -C highspeed &
+h3 iperf3 -c 10.0.0.7 -p 9992 -b 10M -P 10 -t 150 -C highspeed &
+
+h7 iperf -s -p 9991 &
+h7 iperf -s -p 9992 &
+h1 iperf3 -c 10.0.0.7 -p 9991 -b 10M -P 10 -t 150 -C yeah &
+h3 iperf3 -c 10.0.0.7 -p 9992 -b 10M -P 10 -t 150 -C yeah &
+
+--(c)
+h7 iperf -s -p 9991 &
+h7 iperf -s -p 9992 &
+h7 iperf -s -p 9993 &
+h1 iperf3 -c 10.0.0.7 -p 9991 -b 10M -P 10 -t 150 -C bic &
+h3 iperf3 -c 10.0.0.7 -p 9992 -b 10M -P 10 -t 150 -C bic &
+h4 iperf3 -c 10.0.0.7 -p 9993 -b 10M -P 10 -t 150 -C bic &
+
+h7 iperf -s -p 9991 &
+h7 iperf -s -p 9992 &
+h7 iperf -s -p 9993 &
+h1 iperf3 -c 10.0.0.7 -p 9991 -b 10M -P 10 -t 150 -C highspeed &
+h3 iperf3 -c 10.0.0.7 -p 9992 -b 10M -P 10 -t 150 -C highspeed &
+h4 iperf3 -c 10.0.0.7 -p 9993 -b 10M -P 10 -t 150 -C highspeed &
+
+h7 iperf -s -p 9991 &
+h7 iperf -s -p 9992 &
+h7 iperf -s -p 9993 &
+h1 iperf3 -c 10.0.0.7 -p 9991 -b 10M -P 10 -t 150 -C yeah &
+h3 iperf3 -c 10.0.0.7 -p 9992 -b 10M -P 10 -t 150 -C yeah &
+h4 iperf3 -c 10.0.0.7 -p 9993 -b 10M -P 10 -t 150 -C yeah &
+
+
+(d)
+-(1,2)
+REPEAT ENTIRE (c) block
+
+
+
+
