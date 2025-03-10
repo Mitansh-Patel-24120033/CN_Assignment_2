@@ -11,8 +11,9 @@ This is the repository containing the files for assignment(2) of Computer Networ
 
 1. **Protocol 1**: BIC TCP
 2. **Protocol 2**: HighSpeed TCP
-3. **Protocol 3**: Cubic TCP (derived from team ID formula)
-
+3. **Protocol 3**: Yeah TCP (derived from team ID formula)
+## Congestion Control Protocols:
+Manage network traffic to prevent overload. Uses mechanisms like TCP slow start and congestion avoidance algorithms. 
 ## Implementation Structure
 
 Three core components with associated tools:
@@ -85,12 +86,13 @@ sudo python3 syn_flood.py -t <server_ip> -p 80 --duration=100
 ```
 
 **Mitigation:**
-
+.  
 ```bash
 sudo sysctl -w net.ipv4.tcp_syncookies=1
 sudo sysctl -w net.ipv4.tcp_max_syn_backlog=1024
 ```
-
+ **Congestion Mitigation**: 
+ Techniques to reduce network overload (e.g., QoS, traffic shaping). Includes bandwidth upgrades and traffic prioritization.  
 
 ### Task 3: Nagle's Algorithm
 
