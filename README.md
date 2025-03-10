@@ -4,7 +4,7 @@ This is the repository containing the files for assignment(2) of Computer Networ
 ## Team Overview
 
 - **Mitansh Patel** (24120033)
-- **Chinteshwar Dhakate** (24120027)
+- **Chinteshwar Dhakate** (24120024)
 
 
 ## Protocol Assignments
