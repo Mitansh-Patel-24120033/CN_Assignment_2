@@ -1,6 +1,5 @@
 # CN_Assignment_2
 This is the repository containing the files for assignment(2) of Computer Networks(2025) at IIT Gandhinagar
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
 ## Team Overview
 
@@ -129,7 +128,5 @@ python3 Task3/nagle_test.py --nagle <0/1> --delay_ack <0/1>
 1. [Mininet Documentation](http://mininet.org/)
 2. [Linux Kernel Parameters](https://www.kernel.org/doc/html/latest/networkir)
 3. [iPerf3 Documentation](https://iperf.fr/)
-
-*Last updated: March 10, 2025*
 
 <div style="text-align: center">⁂</div>
