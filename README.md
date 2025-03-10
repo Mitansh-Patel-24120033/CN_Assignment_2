@@ -118,7 +118,8 @@ Test configurations:
 - **Packet Loss:** tcpdump statistics
 - **Window Size:** TCP header analysis
 - **Connection Duration:** tshark timestamps
-
+- 
+- ## TCP-Flags
 - **SYN Flag**: Initiates TCP connections during 3-way handshake. Sent by clients to synchronize sequence numbers.  
 - **FIN Flag**: Gracefully terminates TCP connections. Triggers 4-step closure process when no data remains. 
 - **RESET,ACK (RST,ACK)**: Abruptly terminates a TCP connection while acknowledging prior data. Combines RST (forceful closure) with ACK (confirms received packets) 
