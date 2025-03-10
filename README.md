@@ -12,7 +12,7 @@ This is the repository containing the files for assignment(2) of Computer Networ
 1. **Protocol 1**: BIC TCP
 2. **Protocol 2**: HighSpeed TCP
 3. **Protocol 3**: Yeah TCP (derived from team ID formula)
- **Congestion Mitigation**: Techniques to reduce network overload (e.g., QoS, traffic shaping). Includes bandwidth upgrades and traffic prioritization.  
+- **Congestion Control Protocols**: Manage network traffic to prevent overload. Uses mechanisms like TCP slow start and congestion avoidance algorithms.  
 
  **Mininet**: Network emulator for creating virtual SDN environments. Simulates switches, hosts, and controllers for testing.  
 
