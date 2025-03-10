@@ -32,8 +32,7 @@ Three core components with associated tools:
 ```
 ├── Task1/                                 # Congestion control comparison
 │   ├── MNet.py                            # Mininet configuration
-│   ├── iperf_config.sh                    # TCP client-server setup
-│   └── analysis.ipynb                     # Jupyter metrics analysis
+│   └── Guide                              # Mininet CLI commands for task
 ├── Task2/                                 # SYN flood implementation
 │   ├── Client.py                          # Client script
 │   ├── Server.sh                          # Server script
