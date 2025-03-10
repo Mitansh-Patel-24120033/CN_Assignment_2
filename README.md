@@ -2,14 +2,6 @@
 This is the repository containing the files for assignment(2) of Computer Networks(2025) at IIT Gandhinagar
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
-# 
-
----
-
-# COMPILE-THESE-INTO-1-README-FILE-FOR-UPLOADING-IN.pdf
-
-This repository contains implementation files for Computer Networks Assignment 2 (2025) comparing TCP congestion protocols, analyzing SYN flood attacks, and testing Nagle's Algorithm performance. The project uses Mininet for network emulation and Python for automation/analysis.
-
 ## Team Overview
 
 - **Mitansh Patel** (24120033)
