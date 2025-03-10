@@ -129,4 +129,3 @@ python3 Task3/nagle_test.py --nagle <0/1> --delay_ack <0/1>
 2. [Linux Kernel Parameters](https://www.kernel.org/doc/html/latest/networkir)
 3. [iPerf3 Documentation](https://iperf.fr/)
 
-<div style="text-align: center">⁂</div>
